@@ -1,5 +1,18 @@
-# angular-seed — the seed for AngularJS apps
+# angular-starter-project
+This project is based on Angular-Seed, the Angular recommended starter project. However, it has been modified as follows:
+- Integrates with Node, Compass and Bootstrap.
+- Has a built-out Gulp file for a variety of automated tasks.
+- Preprocesses SCSS files using Compass.
+- Watches for changes to SCSS, HTML and JS files.
+- When SCSS files change, CSS is injected into the browser.
+- When HTML or JS files change, the browser is reloaded.
+- Injects file path references into index.html.
+- Allows for auto-generation of new pages ("Features") and angular directives ("Components") from templates via the command line.
+- Includes a template for unit testing.
 
+Please see below for information on Angular-Seed, the basis for this project.
+---------------------------------------------------------------------------------------------
+ANGULAR-SEED (basis for this project)
 This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
 You can use it to quickly bootstrap your angular webapp projects and dev environment for these
 projects.
