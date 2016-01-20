@@ -1,0 +1,18 @@
+/*
+  dashboard SCSS
+  Styles can be set via:
+  -- mark up: <dashboard>
+  -- attribute: <some-tag dashboard>
+  -- class: <some-tag class="some-class">
+*/
+
+// mark up styles
+dashboard{
+  display:block;
+}
+
+// attribute styles
+[dashboard]{}
+
+// class styles
+.component-dashboard{}

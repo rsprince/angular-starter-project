@@ -1,0 +1,18 @@
+/*
+  <%= name%> SCSS
+  Styles can be set via:
+  -- mark up: <<%= name%>>
+  -- attribute: <some-tag <%= name%>>
+  -- class: <some-tag class="some-class">
+*/
+
+// mark up styles
+<%= name%>{
+  display:block;
+}
+
+// attribute styles
+[<%= name%>]{}
+
+// class styles
+.component-<%= name%>{}
