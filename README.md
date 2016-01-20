@@ -9,7 +9,6 @@ This project is based on Angular-Seed, the Angular recommended starter project. 
 - Injects file path references into index.html.
 - Allows for auto-generation of new pages ("Features") and angular directives ("Components") from templates via the command line.
 - Includes a template for unit testing.
-
 Please see below for information on Angular-Seed, the basis for this project.
 ---------------------------------------------------------------------------------------------
 ANGULAR-SEED (basis for this project)
