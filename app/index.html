@@ -30,9 +30,9 @@
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav pull-right">
-          <li class="active"><a href="">Products</a></li>
+          <li class="active"><a href="#/Products">Products</a></li>
           <li><a href="">Quotes</a></li>
-          <li><a href="">About</a></li>
+          <li><a href="#/About">About</a></li>
           <li><a href="#/Dashboard">Dashboard</a></li>
           <li><a href="">Contact</a></li>
         </ul>
@@ -45,6 +45,11 @@
     <div ng-view></div>
   </main>
 
+  <footer>
+    <div class="container">
+      <p>&copy; 2016 Cotton Images.com</p>
+    </div>
+  </footer>
 
   <!-- <div>Angular seed app: v<span app-version></span></div> -->
 
@@ -70,8 +75,10 @@
   <script src="components/version/interpolate-filter.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/version.js"></script>
+  <script src="features/about/about.js"></script>
   <script src="features/dashboard/dashboard.js"></script>
   <script src="features/home/home.js"></script>
+  <script src="features/products/products.js"></script>
   <!-- endinject -->
 
   <!-- <script src="components/version/version.js"></script>
