@@ -4,13 +4,20 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.Home',
+  'myApp.Products',
+  'myApp.Quotes',
+  'myApp.About',
   'myApp.Dashboard',
+  'myApp.Contact',
+  'myApp.DesignCategories',
+  'myApp.PresentationArrangements',
+  'myApp.Design',
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider
-  .when('/home',{
+  .when('/Home',{
     templateUrl: 'features/home/home.html'
   })
-  .otherwise({redirectTo: '/home'});
+  .otherwise({redirectTo: '/Home'});
 }]);

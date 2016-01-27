@@ -1,0 +1,142 @@
+<!-- products view -->
+<div class="component component-products">
+  <div class="container">
+    <div class="page-header">
+      <h1>Products</h1>
+    </div>
+    <p class="lead">
+      Lead paragraph goes here... Lead paragraph goes here... Lead paragraph goes here... </p>
+  </div>
+  <div class="container">
+    <!-- Search Menu -->
+    <div class="menu-panel">
+      <h3>Search Filter</h3>
+      <div class="row menu-header">
+        <!-- Column -->
+      <div class="col-md-2">
+        <!-- Category Titles, + icon -->
+        <div ng-click="menuToggle()">
+          <span class="menu-category">Gender</span><span class="glyphicon glyphicon-plus textright"></span>
+        </div>
+        <!-- SUBCATEGORIES by CategoryId -->
+        <ul class="menu-detail mCustomScrollbar">
+          <li ng-repeat="subcategory in categories | filter:{ParentCategoryId:5}:true">
+            <!-- <input type="checkbox" ng-model="checkboxModel.men" ng-true-value="'{{ subcategory.CategoryName }}'" ng-false-value="''"> {{ subcategory.CategoryName }} -->
+            <input type="checkbox" ng-model="gender" ng-change="searchTerms(subcategory.CategoryName)"> {{ subcategory.CategoryName }}
+            <p>{{ gender }}</p>
+          </li>
+        </ul><!-- /subcategories -->
+
+
+      </div><!-- /column -->
+
+      <div class="col-md-2">
+        <!-- Category Titles, + icon -->
+        <div ng-click="menuToggle()">
+          <span class="menu-category">Age</span><span class="glyphicon glyphicon-plus textright"></span>
+        </div>
+        <!-- SUBCATEGORIES by CategoryId -->
+        <ul class="menu-detail mCustomScrollbar">
+          <li ng-repeat="subcategory in categories | filter:{ParentCategoryId:842}:true">
+            <input type="checkbox" ng-model="gender" ng-change="searchTerms(subcategory.CategoryName)"> {{ subcategory.CategoryName }}
+          </li>
+        </ul><!-- /subcategories -->
+      </div><!-- /column -->
+
+      <div class="col-md-2">
+        <div ng-click="menuToggle()">
+          <span class="menu-category">Regions</span><span class="glyphicon glyphicon-plus textright"></span>
+        </div>
+        <!-- SUBCATEGORIES by CategoryId -->
+        <ul class="menu-detail mCustomScrollbar">
+          <li ng-repeat="subcategory in categories | filter:{ParentCategoryId:628}:true">
+            <input type="checkbox" ng-model="gender" ng-change="searchTerms(subcategory.CategoryName)"> {{ subcategory.CategoryName }}
+          </li>
+        </ul><!-- /subcategories -->
+      </div>
+
+      <div class="col-md-2">
+        <div ng-click="menuToggle()">
+          <span class="menu-category">Collections</span><span class="glyphicon glyphicon-plus textright"></span>
+        </div>
+        <!-- SUBCATEGORIES by CategoryId -->
+        <ul class="menu-detail mCustomScrollbar">
+          <li ng-repeat="subcategory in categories | filter:{ParentCategoryId:642}:true">
+            <input type="checkbox" ng-model="gender" ng-change="searchTerms(subcategory.CategoryName)"> {{ subcategory.CategoryName }}
+          </li>
+        </ul><!-- /subcategories -->
+      </div>
+
+      <div class="col-md-2">
+        <div ng-click="menuToggle()">
+          <span class="menu-category">Cruise Lines</span><span class="glyphicon glyphicon-plus textright"></span>
+        </div>
+        <!-- SUBCATEGORIES by CategoryId -->
+        <ul class="menu-detail mCustomScrollbar">
+          <li ng-repeat="subcategory in categories | filter:{ParentCategoryId:653}:true">
+            <input type="checkbox" ng-model="gender" ng-change="searchTerms(subcategory.CategoryName)"> {{ subcategory.CategoryName }}
+          </li>
+        </ul><!-- /subcategories -->
+      </div>
+
+      <div class="col-md-2">
+        <div ng-click="menuToggle()">
+          <span class="menu-category">Location</span><span class="glyphicon glyphicon-plus textright"></span>
+        </div>
+        <!-- SUBCATEGORIES by CategoryId -->
+        <ul class="menu-detail mCustomScrollbar">
+          <li ng-repeat="subcategory in categories | filter:{ParentCategoryId:32}:true">
+            <input type="checkbox" ng-model="gender" ng-change="searchTerms(subcategory.CategoryName)"> {{ subcategory.CategoryName }}
+          </li>
+        </ul><!-- /subcategories -->
+      </div>
+    </div> <!-- /row -->
+
+      <!--<div class="row menu-header">
+        <div class="col-md-2" ng-repeat="category in categoryGroups | limitTo:6">
+          <div ng-click="menuToggle()">
+            <span class="menu-category">{{ category.CategoryName }}</span><span class="glyphicon glyphicon-plus textright"></span>
+          </div>
+          <ul class="menu-detail mCustomScrollbar">
+            <li ng-repeat="subcategory in categories | filter:{ParentCategoryId:category.CategoryId}:true">
+              <input type="checkbox" ng-model="searchName" ng-true-value="{{ subcategory.CategoryName }}" ng-false-value=""> {{ subcategory.CategoryName }}
+            </li>
+          </ul>
+        </div>
+      </div>  -->
+
+      <div class="row">
+        <div class="col-md-12">
+          <input type="text" ng-model="searchName" placeholder="Enter template name"></input>
+          <input type="text" ng-model="searchNumber" placeholder="Enter number"></input>
+          <input type="text" ng-model="searchColor" placeholder="Enter color "></input>
+        </div>
+      </div>
+
+    </div> <!-- / Menu Panel -->
+
+  <div class="row">
+    <div class="col-md-4" ng-repeat="arrangement in arrangements | filter:searchGender | filter:searchName | filter: searchNumber | filter: searchColor | limitTo:10">
+      <div class="arrangement-panel">
+        <h3>{{ arrangement.TemplateName }}</h3>
+        <h4>{{ arrangement.TemplateNum }}</h4>
+        <p>{{ arrangement.ColorName }}</p>
+    </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Search Categories</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12" ng-repeat="category in categoryGroups">
+      {{ category.CategoryName }}, {{ category.CategoryId }}
+    </div>
+  </div>
+
+
+  </div> <!-- /container -->
+</div>

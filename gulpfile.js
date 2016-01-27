@@ -23,11 +23,13 @@ var templates = {
     CONTROLLER  : "templates/controller.js",
     HTML        : "templates/view.html",
     STYLES      : "templates/styles.scss",
-    TEST        : "templates/test.js"
+    TEST        : "templates/test.js",
+    DATAMODEL  : "templates/factory-service.js"
 };
 var paths = {
     DIRECTIVE   : APP_ROOT + "components/",
-    CONTROLLER  : APP_ROOT + "features/"
+    CONTROLLER  : APP_ROOT + "features/",
+    DATAMODEL   : APP_ROOT + "js/data-model"
 };
 
 //*********************** TASKS ********************//
@@ -42,9 +44,9 @@ gulp.task('sass', function(cb){
         .pipe(compass({
             sourcemap: true,                // Creates the css source map
             comments: true,                 // adds the comments in the css
-            css: 'app/css',                 // This lets compass know where to write the css files
-            sass: 'app/scss',               // This lets compass know where the sass files live
-            require: ['sass-globbing']      // you need to require any extra gems. sass-globbing allows your to do  @import "variables/**/*";
+            css: 'app/css',                 // Where to write the css files
+            sass: 'app/scss',               // Where the sass files live
+            require: ['sass-globbing']      // Allows @import "variables/**/*";
         }))
         .pipe(browserSync.stream())
 });
@@ -60,8 +62,7 @@ gulp.task('watch', ['browserSync'], function(){
 gulp.task('index', function(){
   var target = gulp.src('app/index.html');
   var sources = gulp.src(['app/**/*.js',
-                          'app/**/*.js',
-                          'app/css/*.css',
+                          'app/css/**/*.css',
                           '!app/**/*-test.js',
                           '!app/**/*_test.js',
                           '!app/bower_components/**/*'
@@ -83,6 +84,7 @@ gulp.task('default', function(){
 });
 
 //************ BUILD TASKS *********************//
+// uses generate(name, templateNameKey, locationKey)
 gulp.task('generate:component', function(name){
   generate(name, 'DIRECTIVE');            // Directive file
   generate(name, 'HTML', 'DIRECTIVE');    // HTML file
@@ -97,14 +99,19 @@ gulp.task('generate:feature', function(name){
   generate(name, 'TEST', 'CONTROLLER');
 });
 
+gulp.task('generate:data-model', function(name){
+  generate(name, 'DATAMODEL', 'DATAMODEL');
+})
+
 //************* FUNCTIONS ******************//
 function generate(name, templateNameKey, locationKey) {
     /*
      STEP 1: Setup variables
      */
     var templateUrl = templates[templateNameKey];
-    //var newName;
+    //If it's a test, add "_test" to the name.
     var newName = templateNameKey === 'TEST' ? name + "_test" : name;
+
     // console.log("Name: " + name);
     // console.log("New Name: " + newName);
     // console.log("templateNameKey: " + templateNameKey);
@@ -150,4 +157,14 @@ function generate(name, templateNameKey, locationKey) {
          STEP 5: Store the newly renamed template to the appropriate destination.
          */
         .pipe(gulp.dest('./'));
+}
+
+function camelcase(input){
+    return input.toLowerCase().replace(/-(.)/g, function(match, group1){
+        return group1.toUpperCase();
+    })
+}
+
+function dasherize(input){
+    return input.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
 }

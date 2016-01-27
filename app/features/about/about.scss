@@ -1,0 +1,20 @@
+/*
+  about SCSS
+  Styles can be set via:
+  -- mark up: <about>
+  -- attribute: <some-tag about>
+  -- class: <some-tag class="some-class">
+*/
+
+// mark up styles
+about{
+  display:block;
+}
+
+// attribute styles
+[about]{}
+
+// class styles
+.component-about{
+
+}

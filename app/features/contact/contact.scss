@@ -1,0 +1,18 @@
+/*
+  contact SCSS
+  Styles can be set via:
+  -- mark up: <contact>
+  -- attribute: <some-tag contact>
+  -- class: <some-tag class="some-class">
+*/
+
+// mark up styles
+contact{
+  display:block;
+}
+
+// attribute styles
+[contact]{}
+
+// class styles
+.component-contact{}
