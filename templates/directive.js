@@ -1,14 +1,17 @@
-angular
-    .module('directives')
+// <%= name %> Directive
+'use strict';
+
+angular.module('myApp.<%= name %>', [])
     .directive('<%= name %>',[function(){
-    'use strict';
     return{
         restrict    : 'AE',
-        templateUrl : '<%= url %>',
+        templateUrl : 'components/<%= name %>/<%= name %>.html',
         controller  : function($scope){},
         scope       : {},
         link        : function($scope, element, attrs){
             var $self = $(element);
+            //Javascript goes here...
+
         }
     };
 }]);
