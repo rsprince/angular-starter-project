@@ -1,5 +1,5 @@
 /* Primary SASS file */
-/* line 5, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +21,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -87,6 +87,30 @@ html, body {
 }
 
 /*
+  about SCSS
+  Styles can be set via:
+  -- mark up: <about>
+  -- attribute: <some-tag about>
+  -- class: <some-tag class="some-class">
+*/
+/* line 10, ../features/about/about.scss */
+about {
+  display: block;
+}
+
+/*
+  contact SCSS
+  Styles can be set via:
+  -- mark up: <contact>
+  -- attribute: <some-tag contact>
+  -- class: <some-tag class="some-class">
+*/
+/* line 10, ../features/contact/contact.scss */
+contact {
+  display: block;
+}
+
+/*
   dashboard SCSS
   Styles can be set via:
   -- mark up: <dashboard>
@@ -98,6 +122,84 @@ dashboard {
   display: block;
 }
 
-/* No files to import found in ../components/**\/* */
+/*
+  products SCSS
+  Styles can be set via:
+  -- mark up: <products>
+  -- attribute: <some-tag products>
+  -- class: <some-tag class="some-class">
+*/
+/* line 10, ../features/products/products.scss */
+products {
+  display: block;
+}
+
+/* line 19, ../features/products/products.scss */
+.component-products .menu-panel {
+  margin-bottom: 30px;
+  padding: 16px;
+  background: #dbdbdb;
+  border-radius: 10px;
+  border: 1px solid #666;
+}
+/* line 26, ../features/products/products.scss */
+.component-products .menu-category {
+  background: #444;
+  margin-right: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 100;
+  font-variant: small-caps;
+  width: 80%;
+  padding: 4px;
+  display: inline-block;
+  border-radius: 3px 20px 0 0;
+}
+/* line 38, ../features/products/products.scss */
+.component-products .menu-detail {
+  display: none;
+  list-style: none;
+  margin-top: 0px;
+  font-size: 14px;
+  line-height: 24px;
+  background: #444;
+  color: #fff;
+  height: 160px;
+  border-radius: 0 3px 10px 0px;
+  overflow: auto;
+  padding: 8px 2px;
+}
+/* line 51, ../features/products/products.scss */
+.component-products ul {
+  list-style: none;
+  margin-top: 10px;
+  line-height: 24px;
+}
+/* line 56, ../features/products/products.scss */
+.component-products li {
+  padding: 0 0 0 10px;
+  font-size: 12px;
+}
+/* line 60, ../features/products/products.scss */
+.component-products .arrangement-panel {
+  background: #dbdbdb;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: 1px 2px 4px #222;
+  border-radius: 10px;
+  border: 1px solid #666;
+}
+
+/*
+  chrome SCSS
+  Styles can be set via:
+  -- mark up: <chrome>
+  -- attribute: <some-tag chrome>
+  -- class: <some-tag class="some-class">
+*/
+/* line 10, ../components/chrome/chrome.scss */
+chrome {
+  display: block;
+}
 
 /*# sourceMappingURL=main.css.map */

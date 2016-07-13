@@ -1,0 +1,18 @@
+/*
+  chrome SCSS
+  Styles can be set via:
+  -- mark up: <chrome>
+  -- attribute: <some-tag chrome>
+  -- class: <some-tag class="some-class">
+*/
+
+// mark up styles
+chrome{
+  display:block;
+}
+
+// attribute styles
+[chrome]{}
+
+// class styles
+.component-chrome{}
