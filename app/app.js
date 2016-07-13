@@ -7,7 +7,6 @@ angular.module('myApp', [
   'myApp.Home',
   'myApp.Products',
   'myApp.About',
-  'myApp.Dashboard',
   'myApp.Contact',
   'myApp.version'
 ]).
@@ -15,9 +14,6 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider
   .when('/Home',{
     templateUrl: 'features/home/home.html'
-  })
-  .when('/Products',{
-    templateUrl: 'features/products/products.html'
   })
   .otherwise({redirectTo: '/Home'});
 }]);

@@ -75,15 +75,47 @@ html, body {
 }
 
 /* line 9, ../scss/globals/global.scss */
-.page-header {
-  margin-top: 95px;
-}
-
-/* line 13, ../scss/globals/global.scss */
 .jumbotron {
   background: #ffffff url("../images/tshirts01.jpg") no-repeat center center;
   background-size: cover;
-  height: 600px;
+  height: 440px;
+}
+
+/* line 14, ../scss/globals/global.scss */
+.page-header {
+  margin-top: 95px;
+  border-bottom: 0px;
+}
+
+/* line 18, ../scss/globals/global.scss */
+h1 {
+  font-size: 42px;
+}
+
+/* line 21, ../scss/globals/global.scss */
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* line 25, ../scss/globals/global.scss */
+p {
+  line-height: 20px;
+}
+
+/* line 28, ../scss/globals/global.scss */
+footer {
+  background-color: #222222;
+  color: #636363;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 32px;
+  width: 100%;
+}
+/* line 36, ../scss/globals/global.scss */
+footer p {
+  line-height: 32px;
 }
 
 /*
@@ -107,18 +139,6 @@ about {
 */
 /* line 10, ../features/contact/contact.scss */
 contact {
-  display: block;
-}
-
-/*
-  dashboard SCSS
-  Styles can be set via:
-  -- mark up: <dashboard>
-  -- attribute: <some-tag dashboard>
-  -- class: <some-tag class="some-class">
-*/
-/* line 10, ../features/dashboard/dashboard.scss */
-dashboard {
   display: block;
 }
 

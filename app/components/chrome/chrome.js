@@ -11,13 +11,6 @@ angular.module('myApp.Chrome', [])
         link        : function($scope, element, attrs){
             var $self = $(element);
             //Javascript goes here...
-            var myVar = "Hello";
-
-            var myObj = {};
-            myObj = {
-              name: "Jim",
-              tel:  "555-555-5555"
-            }
 
         }
     };
