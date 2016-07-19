@@ -6,7 +6,9 @@ angular.module('myApp.<%= name %>', [])
     return{
         restrict    : 'AE',
         templateUrl : 'components/<%= name %>/<%= name %>.html',
-        controller  : function($scope){},
+        controller  : ['$scope', function($scope){
+          
+        }],
         scope       : {},
         link        : function($scope, element, attrs){
             var $self = $(element);

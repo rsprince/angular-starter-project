@@ -5,10 +5,10 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.Chrome',
   'myApp.Home',
-  'myApp.Products',
   'myApp.About',
-  'myApp.Contact',
-  'myApp.version'
+  'myApp.Products'
+  // 'myApp.Contact',
+  // 'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider

@@ -9,7 +9,7 @@ angular.module('myApp.<%= name %>', ['ngRoute'])
     controller: '<%= name %>Ctrl'
   });
 }])
-.controller('<%= name %>Ctrl', [function() {
+.controller('<%= name %>Ctrl', ['$scope', function($scope) {
   //Javascript goes here...
 
 }]);
