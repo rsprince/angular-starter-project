@@ -2,13 +2,12 @@
 'use strict';
 
 angular.module('myApp.<%= name %>', [])
-    .directive('<%= name %>',[function(){
+    //Directive must begin with lower case
+    .directive('<%= directiveName %>',[function(){
     return{
         restrict    : 'AE',
-        templateUrl : 'components/<%= name %>/<%= name %>.html',
-        controller  : ['$scope', function($scope){
-          
-        }],
+        templateUrl : '<%= url %>',
+        controller  : ['$scope', function($scope){}],
         scope       : {},
         link        : function($scope, element, attrs){
             var $self = $(element);

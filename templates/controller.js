@@ -5,7 +5,7 @@ angular.module('myApp.<%= name %>', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/<%= name %>', {
-    templateUrl: 'features/<%= name %>/<%= name %>.html',
+    templateUrl: '<%= url %>',
     controller: '<%= name %>Ctrl'
   });
 }])

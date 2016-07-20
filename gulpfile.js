@@ -42,10 +42,10 @@ var templates = {
     FUNCTION    : "templates/function-service.js"
 };
 var paths = {
-    DIRECTIVE   : APP_ROOT + "components/",
-    CONTROLLER  : APP_ROOT + "features/",
-    DATAMODEL   : APP_ROOT + "js/data-model",
-    FUNCTION    : APP_ROOT + "js/services"
+    DIRECTIVE   : "components/",
+    CONTROLLER  : "features/",
+    DATAMODEL   : "js/data-model",
+    FUNCTION    : "js/services"
 };
 
 //*********************** TASKS ********************//
@@ -232,13 +232,16 @@ function generate(name, templateNameKey, locationKey) {
     // IF the user gave a name using camel-case or underscores it will be transformed to dashes
     // NOTE: paths[locationKey || templateNameKey] will use the locationKey to find the path but if it does not
     // exist (undefined) then it will use the templateNameKey
-    var destinationPath = paths[locationKey || templateNameKey];
+    var destinationPath = APP_ROOT + paths[locationKey || templateNameKey];
     destinationPath += (needAdditionalFolder) ? name.dasherize() : '';
+    var templatePath = paths[locationKey || templateNameKey];
+    templatePath += (needAdditionalFolder) ? name.dasherize() : '';
+    //console.log("templatePath: " + templatePath);
     //console.log("destinationPath: " + destinationPath);
     /*
      STEP 2: Get the template
    */
-  return gulp.src( templateUrl)
+  return gulp.src( templateUrl )
         /*
          STEP 3: Rename the template
          */
@@ -251,24 +254,23 @@ function generate(name, templateNameKey, locationKey) {
         }))
         /*
          STEP 4: Inject the data into the template.
-         NOTE: .dasherize() & .camelize() are SugarJS functions
+         NOTE: .dasherize() & .camelize() are functions written in SugarJS
          */
         .pipe(template({
             // Make sure your naming is consistent with the type of module you are creating
             name: shouldDasherizeVariableNames ? name.dasherize() : name.camelize(),
 
             // This is primarily used when creating directives as the template URL needs to know where the HTML lives
-            url: destinationPath + '/' + name.dasherize() +'.html',
+            url: templatePath + '/' + name.dasherize() +'.html',
             directiveName: name.camelize(false) //don't capitalize first letter.
         }))
         /*
          STEP 5: Store the newly renamed template to the appropriate destination.
          */
         .pipe(gulp.dest('./'));
-        console.log(destinationPath + '/' + name.dasherize() +'.html');
 }
 
-function camelcase(input){
+function camelize(input){
     return input.toLowerCase().replace(/-(.)/g, function(match, group1){
         return group1.toUpperCase();
     })

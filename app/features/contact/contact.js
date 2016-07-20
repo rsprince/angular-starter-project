@@ -5,7 +5,7 @@ angular.module('myApp.Contact', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/Contact', {
-    templateUrl: 'features/Contact/Contact.html',
+    templateUrl: 'features/contact/contact.html',
     controller: 'ContactCtrl'
   });
 }])

@@ -1,4 +1,6 @@
 /* Primary SASS file */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300);
+@import url(https://fonts.googleapis.com/css?family=Marck+Script);
 /* line 5, ../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -65,6 +67,116 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* Cotton Images Colors */
+/*------------ Fonts ------------*/
+/* Animations */
+/* leaving animations ----------------------------------------- */
+/* rotate and fall */
+@keyframes rotateFall {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+    animation-timing-function: ease-out;
+  }
+  40% {
+    transform: rotateZ(17deg);
+  }
+  60% {
+    transform: rotateZ(16deg);
+  }
+  100% {
+    transform: translateY(100%) rotateZ(17deg);
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInSlide {
+  from {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeOutSlide {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+}
+@keyframes slideOutLeft {
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* slide in from the bottom */
+@keyframes slideOutRight {
+  to {
+    transform: translateX(100%);
+  }
+}
+/* rotate out newspaper */
+@keyframes rotateOutNewspaper {
+  to {
+    transform: translateZ(-3000px) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+/* slide out to the top */
+@keyframes slideOutUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+/* entering animations --------------------------------------- */
+/* scale up */
+@keyframes scaleUp {
+  from {
+    opacity: 0.3;
+    -webkit-transform: scale(0.8);
+  }
+}
+/* slide in from the right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: .2;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1.0;
+  }
+}
+/* slide in from the bottom */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 /* Global Styles
    NOTE: Any changes to Bootstrap styles can be
    made here or in scss files for each feature or component.
@@ -90,20 +202,21 @@ html, body {
 /* line 18, ../scss/globals/global.scss */
 h1 {
   font-size: 42px;
+  text-transform: capitalize;
 }
 
-/* line 21, ../scss/globals/global.scss */
+/* line 22, ../scss/globals/global.scss */
 h2 {
   font-size: 28px;
   margin-bottom: 20px;
 }
 
-/* line 25, ../scss/globals/global.scss */
+/* line 26, ../scss/globals/global.scss */
 p {
   line-height: 20px;
 }
 
-/* line 28, ../scss/globals/global.scss */
+/* line 29, ../scss/globals/global.scss */
 footer {
   background-color: #222222;
   color: #636363;
@@ -113,9 +226,22 @@ footer {
   height: 32px;
   width: 100%;
 }
-/* line 36, ../scss/globals/global.scss */
+/* line 37, ../scss/globals/global.scss */
 footer p {
   line-height: 32px;
+}
+
+/*animate */
+/* line 42, ../scss/globals/global.scss */
+div[ng-view].ng-enter {
+  animation: fadeIn 0.95s both ease-in;
+  z-index: 8888;
+}
+
+/* line 47, ../scss/globals/global.scss */
+div[ng-view].ng-leave {
+  animation: fadeOut 0.35s both ease-out;
+  z-index: 9999;
 }
 
 /*
@@ -152,62 +278,6 @@ contact {
 /* line 10, ../features/products/products.scss */
 products {
   display: block;
-}
-
-/* line 19, ../features/products/products.scss */
-.component-products .menu-panel {
-  margin-bottom: 30px;
-  padding: 16px;
-  background: #dbdbdb;
-  border-radius: 10px;
-  border: 1px solid #666;
-}
-/* line 26, ../features/products/products.scss */
-.component-products .menu-category {
-  background: #444;
-  margin-right: 6px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 100;
-  font-variant: small-caps;
-  width: 80%;
-  padding: 4px;
-  display: inline-block;
-  border-radius: 3px 20px 0 0;
-}
-/* line 38, ../features/products/products.scss */
-.component-products .menu-detail {
-  display: none;
-  list-style: none;
-  margin-top: 0px;
-  font-size: 14px;
-  line-height: 24px;
-  background: #444;
-  color: #fff;
-  height: 160px;
-  border-radius: 0 3px 10px 0px;
-  overflow: auto;
-  padding: 8px 2px;
-}
-/* line 51, ../features/products/products.scss */
-.component-products ul {
-  list-style: none;
-  margin-top: 10px;
-  line-height: 24px;
-}
-/* line 56, ../features/products/products.scss */
-.component-products li {
-  padding: 0 0 0 10px;
-  font-size: 12px;
-}
-/* line 60, ../features/products/products.scss */
-.component-products .arrangement-panel {
-  background: #dbdbdb;
-  padding: 10px;
-  margin: 10px 0;
-  box-shadow: 1px 2px 4px #222;
-  border-radius: 10px;
-  border: 1px solid #666;
 }
 
 /*

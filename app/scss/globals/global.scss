@@ -17,6 +17,7 @@ html, body {
 }
 h1 {
   font-size: 42px;
+  text-transform: capitalize;
 }
 h2 {
   font-size: 28px;
@@ -36,4 +37,14 @@ footer {
   p {
     line-height: 32px;
   }
+}
+/*animate */
+div[ng-view].ng-enter {
+  animation: fadeIn 0.95s both ease-in;
+  z-index: 8888;
+}
+
+div[ng-view].ng-leave {
+  animation: fadeOut 0.35s both ease-out;
+  z-index: 9999;
 }
