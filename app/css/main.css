@@ -184,39 +184,40 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 5, ../scss/globals/global.scss */
 html, body {
   font-family: 'Roboto', sans-serif;
+  height: 101%;
 }
 
-/* line 9, ../scss/globals/global.scss */
+/* line 10, ../scss/globals/global.scss */
 .jumbotron {
   background: #ffffff url("../images/tshirts01.jpg") no-repeat center center;
   background-size: cover;
   height: 440px;
 }
 
-/* line 14, ../scss/globals/global.scss */
+/* line 15, ../scss/globals/global.scss */
 .page-header {
   margin-top: 95px;
   border-bottom: 0px;
 }
 
-/* line 18, ../scss/globals/global.scss */
+/* line 19, ../scss/globals/global.scss */
 h1 {
   font-size: 42px;
   text-transform: capitalize;
 }
 
-/* line 22, ../scss/globals/global.scss */
+/* line 23, ../scss/globals/global.scss */
 h2 {
   font-size: 28px;
   margin-bottom: 20px;
 }
 
-/* line 26, ../scss/globals/global.scss */
+/* line 27, ../scss/globals/global.scss */
 p {
   line-height: 20px;
 }
 
-/* line 29, ../scss/globals/global.scss */
+/* line 30, ../scss/globals/global.scss */
 footer {
   background-color: #222222;
   color: #636363;
@@ -226,19 +227,19 @@ footer {
   height: 32px;
   width: 100%;
 }
-/* line 37, ../scss/globals/global.scss */
+/* line 38, ../scss/globals/global.scss */
 footer p {
   line-height: 32px;
 }
 
 /*animate */
-/* line 42, ../scss/globals/global.scss */
+/* line 43, ../scss/globals/global.scss */
 div[ng-view].ng-enter {
   animation: fadeIn 0.95s both ease-in;
   z-index: 8888;
 }
 
-/* line 47, ../scss/globals/global.scss */
+/* line 48, ../scss/globals/global.scss */
 div[ng-view].ng-leave {
   animation: fadeOut 0.35s both ease-out;
   z-index: 9999;
