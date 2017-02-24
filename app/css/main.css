@@ -183,41 +183,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 */
 /* line 5, ../scss/globals/global.scss */
 html, body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Open Sans", sans-serif, sans-serif;
   height: 101%;
+  font-size: 16px;
 }
 
-/* line 10, ../scss/globals/global.scss */
+/* line 11, ../scss/globals/global.scss */
 .jumbotron {
   background: #ffffff url("../images/tshirts01.jpg") no-repeat center center;
   background-size: cover;
   height: 440px;
 }
 
-/* line 15, ../scss/globals/global.scss */
+/* line 16, ../scss/globals/global.scss */
 .page-header {
   margin-top: 95px;
   border-bottom: 0px;
 }
 
-/* line 19, ../scss/globals/global.scss */
+/* line 20, ../scss/globals/global.scss */
 h1 {
   font-size: 42px;
   text-transform: capitalize;
 }
 
-/* line 23, ../scss/globals/global.scss */
+/* line 24, ../scss/globals/global.scss */
 h2 {
   font-size: 28px;
   margin-bottom: 20px;
 }
 
-/* line 27, ../scss/globals/global.scss */
+/* line 28, ../scss/globals/global.scss */
 p {
   line-height: 20px;
 }
 
-/* line 30, ../scss/globals/global.scss */
+/* line 31, ../scss/globals/global.scss */
 footer {
   background-color: #222222;
   color: #636363;
@@ -227,19 +228,19 @@ footer {
   height: 32px;
   width: 100%;
 }
-/* line 38, ../scss/globals/global.scss */
+/* line 39, ../scss/globals/global.scss */
 footer p {
   line-height: 32px;
 }
 
 /*animate */
-/* line 43, ../scss/globals/global.scss */
+/* line 44, ../scss/globals/global.scss */
 div[ng-view].ng-enter {
   animation: fadeIn 0.95s both ease-in;
   z-index: 8888;
 }
 
-/* line 48, ../scss/globals/global.scss */
+/* line 49, ../scss/globals/global.scss */
 div[ng-view].ng-leave {
   animation: fadeOut 0.35s both ease-out;
   z-index: 9999;
@@ -267,6 +268,52 @@ about {
 /* line 10, ../features/contact/contact.scss */
 contact {
   display: block;
+}
+
+/*
+  contacts SCSS
+  Styles can be set via:
+  -- mark up: <contacts>
+  -- attribute: <some-tag contacts>
+  -- class: <some-tag class="some-class">
+*/
+/* line 10, ../features/contacts/contacts.scss */
+contacts {
+  display: block;
+}
+
+/* line 19, ../features/contacts/contacts.scss */
+.component-contacts h1 {
+  color: #4ba9df;
+}
+/* line 22, ../features/contacts/contacts.scss */
+.component-contacts .table-bordered {
+  border-collapse: separate;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -moz-border-radius: 6px;
+}
+/* line 28, ../features/contacts/contacts.scss */
+.component-contacts th {
+  color: #4ba9df;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 36px;
+  height: 60px;
+}
+/* line 36, ../features/contacts/contacts.scss */
+.component-contacts .table > thead > tr > th {
+  vertical-align: middle;
+}
+/* line 39, ../features/contacts/contacts.scss */
+.component-contacts .table-hover > tbody > tr:hover {
+  background-color: #D2D2D2;
+}
+/* line 42, ../features/contacts/contacts.scss */
+.component-contacts .button.disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
 }
 
 /*

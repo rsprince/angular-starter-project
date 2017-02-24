@@ -3,8 +3,9 @@
    made here or in scss files for each feature or component.
 */
 html, body {
-  font-family: 'Roboto', sans-serif;
+  font-family: $app-font, sans-serif;
   height: 101%;
+  font-size: 16px;
 }
 
 .jumbotron {

@@ -1,0 +1,46 @@
+/*
+  contacts SCSS
+  Styles can be set via:
+  -- mark up: <contacts>
+  -- attribute: <some-tag contacts>
+  -- class: <some-tag class="some-class">
+*/
+
+// mark up styles
+contacts{
+  display:block;
+}
+
+// attribute styles
+[contacts]{}
+
+// class styles
+.component-contacts{
+  h1 {
+    color: #4ba9df;
+  }
+  .table-bordered {
+    border-collapse:separate;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    -moz-border-radius:6px;
+  }
+  th {
+    color: #4ba9df;
+    font-weight: 500;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 36px;
+    height: 60px;
+  }
+  .table > thead > tr > th {
+     vertical-align: middle;
+   }
+  .table-hover > tbody > tr:hover {
+    background-color: #D2D2D2;
+  }
+  .button.disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+}

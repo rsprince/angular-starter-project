@@ -1,0 +1,83 @@
+<!-- contacts view -->
+<div class="component component-contacts">
+    <div class="container">
+      <div class="page-header">
+        <!-- Page Title -->
+        <h1>External Contacts</h1>
+      </div>
+      <p class="lead">
+        Select the client contacts associated with this offer
+      </p>
+    </div>
+    <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Type</th>
+              <th>Name</th>
+              <th>Title</th>
+              <th>Phone</th>
+              <th>Ext.</th>
+              <th>Fax</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="contact in contacts">
+              <td>
+                {{$index}}
+                <input class="form-check-input" type="checkbox" ng-model="contact.checked" ng-click="selectContacts($index)">
+              </td>
+              <td>{{contact.type}}</td>
+              <td>{{contact.name}}</td>
+              <td>{{contact.title}}</td>
+              <td>{{contact.phone}}</td>
+              <td>{{contact.ext}}</td>
+              <td>{{contact.fax}}</td>
+              <td>{{contact.email}}</td>
+            </tr>
+            <tr class="add-input">
+              <td></td>
+              <td>
+                <input class="form-control" type="text" ng-model="form.type" placeholder="Add type...">
+              </td>
+              <td>
+                <input class="form-control" type="text" ng-model="form.name" placeholder="Add name...">
+              </td>
+              <td>
+                <input class="form-control" type="text" ng-model="form.title" placeholder="Add title...">
+              </td>
+              <td>
+                <input class="form-control" type="text" ng-model="form.phone" placeholder="Add phone...">
+              </td>
+              <td>
+                <input class="form-control" type="text" ng-model="form.ext" placeholder="Add extension...">
+              </td>
+              <td>
+                <input class="form-control" type="text" ng-model="form.fax" placeholder="Add fax...">
+              </td>
+              <td>
+                <input class="form-control" type="text" ng-model="form.email" placeholder="Add email...">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-primary" ng-click="addContact()">
+          <span class="glyphicon glyphicon-ok"></span>
+          Add Contact
+        </button>
+        <button type="button" class="btn btn-primary" ng-click="deleteContacts()">
+          <span class="glyphicon glyphicon-ok"></span>
+          Delete Contact
+        </button>
+      </div>
+    </div>
+    </div> <!-- /container -->
+</div>

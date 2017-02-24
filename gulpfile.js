@@ -195,7 +195,7 @@ gulp.task('copy-data', function(){
 gulp.task('zip-files', function () {
 	return gulp.src('dist/**/*')
 		// .pipe(/* knock yourself out */)
-		.pipe(zip.dest('dist/archive/cotton-archive.zip'));
+		.pipe(zip.dest('dist/archive/app-package.zip'));
 });
 
 
