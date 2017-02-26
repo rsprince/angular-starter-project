@@ -1,7 +1,7 @@
 /*
- Gulp file for Cotton Images v.2.1
+ Gulp file for Inmar Demo
  created by  : richard sprince
- date        : 7 jan 2016
+ date        : 24 feb 2017
  TO DO:
  - check order that files get injected.
  */
@@ -29,6 +29,8 @@ var cache       = require('gulp-cache'); //cache images
 
 var rev         = require('gulp-rev'); //generate revision number in name
 var revReplace  = require('gulp-rev-replace'); //replace file reference with revision number in name
+
+var gutil = require('gulp-util'); //use to debug uglify errors
 
 // Application variables
 var APP_ROOT  = "app/";

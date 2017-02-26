@@ -28,7 +28,7 @@
           <tbody>
             <tr ng-repeat="contact in contacts">
               <td>
-                {{$index}}
+                <!-- {{$index}} -->
                 <input class="form-check-input" type="checkbox" ng-model="contact.checked" ng-click="selectContacts($index)">
               </td>
               <td>{{contact.type}}</td>
@@ -73,8 +73,8 @@
           <span class="glyphicon glyphicon-ok"></span>
           Add Contact
         </button>
-        <button type="button" class="btn btn-primary" ng-click="deleteContacts()">
-          <span class="glyphicon glyphicon-ok"></span>
+        <button type="button" class="btn btn-primary" ng-class="{ disabled: deleteDisabled }" ng-click="deleteContacts()">
+          <span class="glyphicon glyphicon-remove"></span>
           Delete Contact
         </button>
       </div>

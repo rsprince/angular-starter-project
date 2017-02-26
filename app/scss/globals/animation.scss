@@ -25,7 +25,7 @@
 }
 
 @keyframes fadeInSlide {
-  from { transform:translateY(10%); opacity: 0; }
+  from { transform:translateY(-20%); opacity: 0; }
   to   { transform: translateY(0); opacity: 1; }
 }
 @keyframes fadeOutSlide {

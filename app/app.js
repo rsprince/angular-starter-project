@@ -7,10 +7,7 @@ angular.module('myApp', [
   'myApp.Chrome',
   'myApp.Home',
   'myApp.About',
-  'myApp.Products',
-  'myApp.Contact',
   'myApp.Contacts'
-  // 'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider

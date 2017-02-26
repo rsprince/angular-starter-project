@@ -4,8 +4,13 @@
 */
 html, body {
   font-family: $app-font, sans-serif;
-  height: 101%;
+  min-height: 101%;
   font-size: 16px;
+  padding-bottom: 60px;
+}
+
+.container {
+  min-height: 101%;
 }
 
 .jumbotron {
@@ -14,12 +19,13 @@ html, body {
   height: 440px;
 }
 .page-header {
-  margin-top: 95px;
+  margin-top: 80px;
   border-bottom: 0px;
 }
 h1 {
   font-size: 42px;
   text-transform: capitalize;
+  margin-top: 20px;
 }
 h2 {
   font-size: 28px;
@@ -48,5 +54,15 @@ div[ng-view].ng-enter {
 
 div[ng-view].ng-leave {
   animation: fadeOut 0.35s both ease-out;
+  z-index: 9999;
+}
+
+tr[ng-repeat].ng-enter {
+  animation: fadeInSlide 0.25s both linear;
+  z-index: 8888;
+}
+
+tr[ng-repeat].ng-leave {
+  animation: fadeOutSlide 0.35s both linear;
   z-index: 9999;
 }
